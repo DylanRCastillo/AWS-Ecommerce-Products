@@ -2,7 +2,7 @@
 
 -- OFFICE PRODUCTS
 -- Non-vine reviews - 16 Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -20,17 +20,19 @@ FROM
       vine_table v 
       ON v.review_id = r.review_id 
 WHERE
-   v.vine = 'N' 
+   v.vine = 'N'
    AND r.product_category = 'Office Products' 
 GROUP BY
    r.product_category,
    p.product_id,
    p.product_title,
-   v.vine 
+   v.vine
+HAVING
+	COUNT(v.review_id) BETWEEN 15 and 300
 ORDER BY
    total_reviews DESC LIMIT 100;
 -- Vine reviews - 0 Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -61,7 +63,7 @@ ORDER BY
 
 -- HOME IMPROVEMENT
 -- Non-vine reviews - 100+ Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -89,7 +91,7 @@ GROUP BY
 ORDER BY
    total_reviews DESC LIMIT 100;
 -- Vine reviews - 100+ Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -120,7 +122,7 @@ ORDER BY
 
 -- LAWN AND GARDEN
 -- Non-vine reviews - 52 Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -144,11 +146,13 @@ GROUP BY
    r.product_category,
    p.product_id,
    p.product_title,
-   v.vine 
+   v.vine
+HAVING
+   COUNT(v.review_id) BETWEEN 15 and 300 
 ORDER BY
    total_reviews DESC LIMIT 100;
 -- Vine reviews - 0 Rows
-SELECT DISTINCT
+SELECT
    r.product_category,
    p.product_id,
    p.product_title,
@@ -172,7 +176,9 @@ GROUP BY
    r.product_category,
    p.product_id,
    p.product_title,
-   v.vine 
+   v.vine
+HAVING
+   COUNT(v.review_id) BETWEEN 15 and 300 
 ORDER BY
    total_reviews DESC LIMIT 100;
 
