@@ -18,6 +18,7 @@ Our client is an amazon ecommerce store owner in the niche of home care and deco
   ![schema](Images/1.png)
 
   * **Load** the DataFrames that correspond to tables into an RDS instance. **Note:** This process can take up to 10 minutes for each.
+  ![loop](Images/7.PNG)
 
 ### Queries
 
