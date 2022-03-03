@@ -15,7 +15,7 @@ Our client is an amazon ecommerce store owner in the niche of home care and deco
 * For each dataset, complete the following:
 
   * **Transform** the dataset to fit the tables in the [schema file](../Resources/schema.sql). Be sure the DataFrames match in data type and in column name.
-  [schema](Images/1.PNG)
+  ![schema](Images/1.PNG)
 
   * **Load** the DataFrames that correspond to tables into an RDS instance. **Note:** This process can take up to 10 minutes for each.
 
