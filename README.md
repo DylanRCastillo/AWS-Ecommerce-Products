@@ -23,8 +23,10 @@ Our client is an amazon ecommerce store owner in the niche of home care and deco
 ### Queries
 
 * Using SQLAlchemy query to the RDS database and save to dataframes
+![loop](Images/3.PNG)
 
 * Union dataframes respectively by non-vine and vine.
+![union](Images/5.PNG)
 
 * Finally, export output into csvs of non-vine and vine separately.
 
